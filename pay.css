@@ -1,0 +1,205 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.payment-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 2.2em;
+    color: #4a2c2a; /* Темно-коричневий */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.order-summary h2 {
+    font-size: 1.5em;
+    color: #6a4f4b;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+/* Стилі для динамічних елементів кошика у зведенні оплати */
+.cart-item-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+    color: #555;
+    flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+}
+
+.cart-item-summary .item-info {
+    flex: 1; /* Займає доступний простір */
+    margin-right: 10px;
+}
+
+.cart-item-summary .item-name {
+    font-weight: bold;
+    color: #4a2c2a;
+    display: block; /* Кожен елемент на новому рядку */
+}
+
+.cart-item-summary .item-details-line {
+    font-size: 0.9em;
+    color: #777;
+    display: block;
+    margin-left: 10px; /* Невеликий відступ для вкладених деталей */
+}
+
+.cart-item-summary .item-price {
+    font-weight: bold;
+    color: #8B4513;
+    white-space: nowrap; /* Запобігає переносу ціни */
+}
+
+
+.total-amount {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #8B4513; /* Колір кави */
+    margin-top: 15px;
+    text-align: right;
+    border-top: 1px dashed #ddd; /* Додано роздільник для Total */
+    padding-top: 10px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    position: relative; /* Для іконок картки */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Враховує padding та border у ширині */
+    font-size: 1em;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: #8B4513;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+}
+
+.card-icons {
+    position: absolute;
+    right: 10px;
+    top: 38px; /* Вирівнюємо по вводу */
+    display: flex;
+    gap: 5px;
+}
+
+.card-icons i {
+    font-size: 1.8em;
+    color: #999;
+    transition: opacity 0.3s ease;
+    opacity: 0.3; /* За замовчуванням напівпрозорі */
+}
+.card-icons i.active {
+    opacity: 1; /* Активна іконка */
+}
+
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.expiry-date input {
+    width: calc(50% - 15px); /* MM / YY */
+    display: inline-block;
+}
+
+.expiry-date span {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.pay-button {
+    background-color: #8B4513; /* Колір кави */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.pay-button:hover {
+    background-color: #6a340f;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Адаптивність для менших екранів */
+@media (max-width: 600px) {
+    .payment-container {
+        padding: 20px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .expiry-date input {
+        width: calc(50% - 10px);
+    }
+    .expiry-date span {
+        margin: 0 2px;
+    }
+}

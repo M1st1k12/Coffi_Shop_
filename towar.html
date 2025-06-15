@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зробити Замовлення - Ваш Кавовий Магазин</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/towar.css">
+    <link rel="stylesheet" href="./CSS/card-slider.css">
+</head>
+<body>
+    <div class="cart-header-only">
+        <div class="profile-icon-wrapper">
+            <a href="profile.html" class="profile-icon-link">
+                <i class="fas fa-user-circle profile-icon"></i>
+            </a>
+        </div>
+        
+        <div class="cart-icon-wrapper">
+            <a href="cart.html" class="cart-icon-link">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                <span id="cart-count-display" class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="order-page-wrapper">
+        <div class="robot-sasha-section">
+            <div class="robot-sasha-card">
+                <img src="../images/cute-cartoon-robot-with-coffee_634248-823.jpg" alt="Робот Саша" class="robot-avatar">
+                <h2 class="robot-greeting">Привіт! Я Саша.</h2>
+                <p class="robot-message">Радий бачити вас у нашому кавовому раю! Оберіть свій улюблений напій зі списку праворуч, і я допоможу вам оформити замовлення. Бажаю смачного!</p>
+                <div class="robot-tips">
+                    <h3>Може, вам цікаво:</h3>
+                    <ul>
+                        <li><a href="#" class="tip-link">Історія кавових напоїв</a></li>
+                        <li><a href="#" class="tip-link">Яку каву обрати для настрою?</a></li>
+                        <li><a href="#" class="tip-link">Поради щодо приготування</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="coffee-selection-section">
+            <h1 class="section-title">Оберіть свій напій</h1>
+            <div class="coffee-grid">
+                <div class="coffee-box" data-settings-page="raf.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/raf-kofe.jpg" alt="Раф кава 1" class="card-slide active">
+                            <img src="../images/raf.jpg" alt="Раф кава 2" class="card-slide">
+                            </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Раф</h3>
+                    <p class="coffee-description">Ніжний кремовий напій на основі еспресо, вершків та ванільного цукру.</p>
+                    <span class="coffee-price">Від 90 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="americano.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/images.jpg" alt="Американо 1" class="card-slide active">
+                            <img src="../images/americano23.jpg" alt="Американо 2" class="card-slide">
+                            </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Американо</h3>
+                    <p class="coffee-description">Класичний еспресо, розбавлений гарячою водою для м'якого смаку.</p>
+                    <span class="coffee-price">Від 70 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="capuchino.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/chomu-zrobiti-kapuchino-garyachishe-ce-nepravilnij-zapit-do-barista.jpg" alt="Капучино 1" class="card-slide active">
+                            <img src="../images/cappuchino.jpg" alt="Капучино 2" class="card-slide">
+                        </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Капучино</h3>
+                    <p class="coffee-description">Еспресо з гарячим молоком і пишною молочною піною.</p>
+                    <span class="coffee-price">Від 80 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="moka.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/mokko.jpg" alt="Мока 1" class="card-slide active">
+                            <img src="../images/moka.jpg" alt="Мока 2" class="card-slide">
+                        </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Мока</h3>
+                    <p class="coffee-description">Насичений напій з еспресо, шоколаду, молока та збитих вершків.</p>
+                    <span class="coffee-price">Від 95 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="lyngo.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/images (2).jpg" alt="Лунго 1" class="card-slide active">
+                            <img src="../images/lungo.webp" alt="Лунго 2" class="card-slide">
+                        </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Лунго</h3>
+                    <p class="coffee-description">Еспресо, пропущений через більший об'єм води, для легшого смаку.</p>
+                    <span class="coffee-price">Від 65 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="mokachino.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/mocaccino-e1467987845728.jpg" alt="Мокачино 1" class="card-slide active">
+                            <img src="../images/mokachina.jpg" alt="Мокачино 2" class="card-slide">
+                        </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Мокачино</h3>
+                    <p class="coffee-description">Еспресо, гаряче молоко та шоколадний сироп, ідеальний для ласунів.</p>
+                    <span class="coffee-price">Від 90 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="late.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/images (1).jpg" alt="Лате 1" class="card-slide active">
+                            <img src="../images/latte.jpg" alt="Лате 2" class="card-slide">
+                        </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Лате</h3>
+                    <p class="coffee-description">Багато молока та трохи піни, ідеальний для любителів молочних напоїв.</p>
+                    <span class="coffee-price">Від 85 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="espreso.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/espreso.jpeg" alt="Еспресо 1" class="card-slide active">
+                            <img src="../images/espresoxzx.avif" alt="Еспресо 2" class="card-slide">
+                        </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Еспресо</h3>
+                    <p class="coffee-description">Маленька, але міцна порція кави, основа всіх кавових напоїв.</p>
+                    <span class="coffee-price">Від 60 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="makiato.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/images (3).jpg" alt="Макіато 1" class="card-slide active">
+                            <img src="../images/makiato2.webp" alt="Макіато 2" class="card-slide">
+                        </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Макіато</h3>
+                    <p class="coffee-description">Еспресо, "відмічений" невеликою кількістю гарячого молока та піни.</p>
+                    <span class="coffee-price">Від 75 грн</span>
+                </div>
+
+                <div class="coffee-box" data-settings-page="glase.html">
+                    <div class="card-slider-container">
+                        <div class="card-slides">
+                            <img src="../images/kofe-glyase-po-polski.jpg" alt="Глясе 1" class="card-slide active">
+                            <img src="../images/Kava_glace.jpg" alt="Глясе 2" class="card-slide">
+                        </div>
+                        <button class="card-slide-prev">&#10094;</button>
+                        <button class="card-slide-next">&#10095;</button>
+                    </div>
+                    <h3 class="coffee-name">Глясе</h3>
+                    <p class="coffee-description">Холодна кава з кулькою морозива, освіжаючий та смачний десерт.</p>
+                    <span class="coffee-price">Від 100 грн</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./JS/towar-page-with-sliders.js"></script>
+</body>
+</html>

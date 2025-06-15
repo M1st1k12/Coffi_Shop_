@@ -1,0 +1,98 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f2ee; /* Світлий фон */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #5C4033; /* Темно-коричневий */
+    margin-bottom: 30px;
+}
+
+.profile-details {
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.profile-details p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.profile-details p strong {
+    color: #4a2c2a;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.logout-button,
+.back-to-menu-btn {
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    width: 100%;
+}
+
+.logout-button {
+    background-color: #dc3545; /* Червоний */
+    color: white;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+.back-to-menu-btn {
+    background-color: #007bff; /* Синій */
+    color: white;
+}
+
+.back-to-menu-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .profile-details p {
+        font-size: 1em;
+    }
+}

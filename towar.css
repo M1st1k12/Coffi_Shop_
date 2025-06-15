@@ -1,0 +1,386 @@
+/* --- Загальні стилі та шрифти --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f4f2ee, #e0dcd7); /* М'який світло-бежевий градієнт */
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5C4033;
+}
+
+a {
+    text-decoration: none;
+    color: #8B4513;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a0522d;
+}
+
+/* --- Стилі для іконок в хедері --- */
+.cart-header-only {
+    position: absolute; /* Щоб іконки були зверху, не впливаючи на розмітку */
+    top: 20px;
+    right: 40px;
+    z-index: 1000;
+    display: flex; /* Додаємо flexbox для вирівнювання іконок */
+    gap: 20px; /* Відстань між іконками */
+    align-items: center; /* Вирівнювання по центру по вертикалі */
+}
+
+/* Стилі для іконки профілю */
+.profile-icon-wrapper {
+    position: relative;
+    display: flex; /* Для центрування іконки */
+    align-items: center;
+}
+
+.profile-icon-link {
+    color: #5C4033; /* Колір іконки профілю */
+    font-size: 2.2em; /* Розмір іконки */
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon-link:hover {
+    color: #8B4513; /* Зміна кольору при наведенні */
+}
+
+/* Стилі для іконки кошика */
+.cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon-link {
+    color: #5C4033; /* Колір іконки кошика */
+    font-size: 2.2em; /* Збільшений розмір для кращої видимості */
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon-link:hover {
+    color: #8B4513; /* Зміна кольору при наведенні */
+}
+
+.cart-count {
+    background-color: #dc3545; /* Червоний колір для лічильника */
+    color: white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 0.7em;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    line-height: 1;
+    min-width: 15px;
+    text-align: center;
+}
+
+/* --- Специфічні стилі для сторінки замовлення (towar.html) --- */
+
+.order-page-wrapper {
+    display: flex;
+    min-height: 100vh; /* Займає всю висоту вікна */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Секція Робота Саші (ліва частина) */
+.robot-sasha-section {
+    flex: 0 0 35%;
+    background: linear-gradient(to bottom, #7B3F00, #5C4033);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0; /* Прилипає до верху */
+    height: 100vh; /* Займає всю висоту вікна */
+    overflow-y: auto;
+}
+
+.robot-sasha-card {
+    max-width: 350px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.robot-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #f0f0f0;
+    object-fit: cover;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.robot-greeting {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.robot-message {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #f0f0f0;
+}
+
+.robot-tips {
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.robot-tips h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.robot-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.robot-tips li {
+    margin-bottom: 10px;
+}
+
+.robot-tips .tip-link {
+    color: #add8e6;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.robot-tips .tip-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* Секція Вибору Кави (права частина) */
+.coffee-selection-section {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.section-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #5C4033;
+}
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.coffee-box {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.coffee-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.coffee-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+.coffee-name {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #5C4033;
+}
+
+.coffee-description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.coffee-price {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #8B4513;
+    margin-top: 10px;
+}
+
+/* Стилі для слайдера всередині карток (card-slider.css буде окремим) */
+.card-slider-container {
+    position: relative;
+    width: 100%;
+    height: 180px; /* Фіксована висота для слайдера */
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: none; /* За замовчуванням приховано, JS покаже active */
+}
+
+.card-slide.active {
+    display: block;
+}
+
+.card-slide-prev,
+.card-slide-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2em;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.card-slide-prev {
+    left: 10px;
+}
+
+.card-slide-next {
+    right: 10px;
+}
+
+.card-slide-prev:hover,
+.card-slide-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* --- Адаптивність (для мобільних та планшетів) --- */
+@media (max-width: 992px) {
+    .cart-header-only {
+        top: 10px;
+        right: 15px;
+        gap: 15px; /* Зменшуємо відстань між іконками */
+    }
+
+    .profile-icon-link,
+    .cart-icon-link {
+        font-size: 1.8em; /* Зменшуємо розмір іконок */
+    }
+
+    .order-page-wrapper {
+        flex-direction: column;
+    }
+
+    .robot-sasha-section {
+        flex: none;
+        height: auto;
+        padding: 30px 20px;
+        position: static;
+    }
+
+    .robot-sasha-card {
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    .coffee-selection-section {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .coffee-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .coffee-box {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .coffee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .robot-greeting {
+        font-size: 1.8em;
+    }
+
+    .robot-message {
+        font-size: 1em;
+    }
+    
+    .cart-count {
+        top: -3px; /* Коригуємо положення лічильника */
+        right: -8px;
+        padding: 2px 6px;
+        font-size: 0.6em;
+    }
+}

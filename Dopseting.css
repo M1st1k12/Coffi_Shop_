@@ -1,0 +1,164 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.order-details-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+
+.coffee-image-display {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0e0e0; /* Легкий фон для зображення */
+}
+
+.main-coffee-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px; /* Трохи заокруглені кути для фото */
+    object-fit: contain; /* Зображення буде масштабуватися всередині, не обрізаючи */
+}
+
+.settings-card {
+    flex: 1.5; /* Трохи більше місця для налаштувань */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #4a2c2a; /* Темно-коричневий для заголовка */
+    margin-bottom: 5px;
+}
+
+.price-info {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #6a4f4b;
+    margin-bottom: 20px;
+}
+
+.setting-group {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.setting-group:last-child {
+    border-bottom: none; /* Без межі для останньої групи */
+    padding-bottom: 0;
+}
+
+h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #4a2c2a;
+}
+
+.options-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.option-label {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.option-label:hover {
+    background-color: #f0f0f0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #6a4f4b; /* Колір для радіо кнопок/чекбоксів */
+    cursor: pointer;
+    transform: scale(1.2); /* Збільшити розмір елементів форми */
+}
+
+/* Стилі для тексту біля вибраних радіо-кнопок/чекбоксів */
+input[type="radio"]:checked + span,
+input[type="checkbox"]:checked + span {
+    font-weight: bold;
+    color: #4a2c2a;
+}
+
+.option-label input[type="radio"]:checked,
+.option-label input[type="checkbox"]:checked {
+    border-color: #6a4f4b;
+    box-shadow: 0 0 0 2px #6a4f4b;
+}
+
+.add-to-cart-button,
+.back-to-menu-button { /* Стилі для обох кнопок */
+    background-color: #8B4513; /* Колір кави */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Важливо для коректної ширини з padding */
+}
+
+.add-to-cart-button:hover,
+.back-to-menu-button:hover {
+    background-color: #6a340f;
+}
+
+.back-to-menu-button {
+    background-color: #555; /* Інший колір для кнопки "Назад" */
+    margin-top: 10px; /* Трохи відступу від кнопки "Додати" */
+}
+
+.back-to-menu-button:hover {
+    background-color: #333;
+}
+
+
+/* Адаптивність для менших екранів */
+@media (max-width: 768px) {
+    .order-details-container {
+        flex-direction: column;
+    }
+    .coffee-image-display {
+        padding: 15px;
+        order: -1; /* Зображення зверху на мобільних */
+    }
+    .main-coffee-img {
+        max-height: 200px; /* Обмежити висоту на мобільних */
+    }
+    .settings-card {
+        padding: 20px;
+    }
+}

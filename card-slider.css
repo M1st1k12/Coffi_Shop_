@@ -1,0 +1,98 @@
+/* --- Styles for individual product card sliders (towar.html) --- */
+
+/* Забезпечуємо, що батьківський елемент (coffee-box) може правильно позиціонувати свої дочірні елементи (слайдер) */
+.coffee-box {
+    position: relative; /* Важливо для позиціонування кнопок слайдера */
+    overflow: hidden; /* Обрізає все, що виходить за межі коробки, включаючи перехідні слайди */
+    /* Ваші існуючі стилі для .coffee-box залишаються, але додаються ці два */
+}
+
+.card-slider-container {
+    position: relative;
+    width: 100%;
+    /* Встановіть фіксовану висоту, щоб картки не "стрибали" при перемиканні слайдів */
+    height: 150px; /* Висота, що відповідає вашій початковій .coffee-image */
+    overflow: hidden; /* Приховує зайві частини зображень */
+    border-radius: 8px; /* Менші заокруглення для карток */
+    margin-bottom: 20px; /* Відступ від назви товару */
+    background-color: #f0f0f0; /* Запасний колір фону, якщо зображення прозорі */
+    display: flex; /* Для центрування зображення, якщо воно менше контейнера */
+    justify-content: center;
+    align-items: center;
+}
+
+.card-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative; /* Для абсолютної позиції слайдів */
+}
+
+.card-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Зберігає пропорції зображення, вміщуючи його у контейнер */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* За замовчуванням приховано */
+    transition: opacity 0.5s ease-in-out; /* Плавний перехід при зміні слайда */
+    background-color: white; /* Фон для зображень з прозорістю */
+    padding: 5px; /* Невеликий відступ від країв, якщо object-fit: contain */
+}
+
+.card-slide.active {
+    opacity: 1; /* Показує активний слайд */
+    z-index: 1; /* Переводить активний слайд на передній план */
+}
+
+/* Навігаційні кнопки для слайдера в картці */
+.card-slide-prev,
+.card-slide-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4); /* Напівпрозорий фон */
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    z-index: 2; /* Над зображеннями та фоном */
+    opacity: 0; /* Приховані за замовчуванням */
+    transition: opacity 0.3s ease, background-color 0.2s ease;
+}
+
+/* Показуємо кнопки при наведенні на всю картку кави */
+.coffee-box:hover .card-slide-prev,
+.coffee-box:hover .card-slide-next {
+    opacity: 1;
+}
+
+.card-slide-prev {
+    left: 5px;
+}
+
+.card-slide-next {
+    right: 5px;
+}
+
+.card-slide-prev:hover,
+.card-slide-next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Приховуємо стандартний .coffee-image, оскільки тепер використовуємо слайдер */
+.coffee-box .coffee-image {
+    display: none;
+}
+
+/* Адаптивність для кнопок слайдера на менших екранах */
+@media (max-width: 576px) {
+    .card-slide-prev,
+    .card-slide-next {
+        padding: 5px 8px;
+        font-size: 1em;
+    }
+}

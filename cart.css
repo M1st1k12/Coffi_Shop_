@@ -1,0 +1,225 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f2ee; /* Світлий фон */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cart-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #5C4033; /* Темно-коричневий */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.cart-items-list {
+    margin-bottom: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Щоб деталі були одна під одною */
+    margin-right: 15px; /* Відступ від кнопок кількості */
+}
+
+.item-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #4a2c2a;
+    margin-bottom: 5px;
+}
+
+/* Стилі для додаткових опцій, розміру, цукру */
+.item-option {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 3px;
+}
+.item-option:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.item-price {
+    font-size: 1em;
+    color: #8B4513; /* Колір кави */
+    font-weight: bold; /* Зробимо ціну жирнішою */
+    margin-top: 5px;
+}
+
+.item-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.item-quantity {
+    font-size: 1.1em;
+    font-weight: bold;
+    min-width: 25px;
+    text-align: center;
+}
+
+.remove-item-btn {
+    background-color: #dc3545; /* Червоний колір */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+    margin-left: 10px; /* Відступ від кнопок кількості */
+}
+
+.remove-item-btn:hover {
+    background-color: #c82333;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-top: 20px;
+    border-top: 2px solid #5C4033; /* Товстіша межа для підсумку */
+    margin-top: 20px;
+    color: #4a2c2a;
+}
+
+.cart-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.clear-cart-btn,
+.checkout-btn,
+.back-to-menu-btn {
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    width: 100%;
+}
+
+.checkout-btn {
+    background-color: #28a745; /* Зелений для оформлення */
+    color: white;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+/* Стилі для вимкненої кнопки "Заплатити" */
+.checkout-btn.disabled-btn {
+    background-color: #cccccc; /* Сірий колір для вимкненої кнопки */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+.clear-cart-btn {
+    background-color: #6c757d; /* Сірий для очищення */
+    color: white;
+}
+
+.clear-cart-btn:hover {
+    background-color: #5a6268;
+}
+
+.back-to-menu-btn {
+    background-color: #007bff; /* Синій для повернення */
+    color: white;
+}
+
+.back-to-menu-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .cart-container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .item-details {
+        margin-right: 0;
+        width: 100%; /* Займає всю ширину */
+    }
+    .item-quantity-controls {
+        width: 100%;
+        justify-content: center; /* Центрує кнопки по горизонталі */
+    }
+    .remove-item-btn {
+        margin-left: 0; /* Прибираємо відступ на мобільних */
+        width: 100%; /* Розтягуємо кнопку на всю ширину */
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш Кошик</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/cart.css">
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Ваш Кошик</h1>
+
+        <div id="cart-items" class="cart-items-list">
+            <p class="empty-cart-message">Ваш кошик порожній.</p>
+        </div>
+
+        <div class="cart-summary">
+            <span class="summary-label">Загальна сума:</span>
+            <span id="cart-total" class="summary-total">0.00 грн</span>
+        </div>
+
+        <div class="cart-actions">
+            <button id="clear-cart" class="clear-cart-btn">Очистити кошик</button>
+            <button class="checkout-btn" onclick="window.location.href='pay.html'">Заплатити</button>
+            <button class="back-to-menu-btn" onclick="window.location.href='towar.html'">Повернутися до меню</button>
+        </div>
+    </div>
+
+    <script src="./JS/cart-page.js"></script>
+</body>
+</html>

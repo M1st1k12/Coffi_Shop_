@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Налаштування Замовлення - Еспресо</title>
+    <link rel="stylesheet" href="./CSS/Dopseting.css">
+</head>
+<body>
+    <div class="order-details-container">
+        <div class="coffee-image-display">
+            <img id="selectedCoffeeImage" src="../images/kofe-glyase-po-polski.jpg" alt="Еспресо" class="main-coffee-img">
+        </div>
+
+        <div class="settings-card">
+            <h1 id="coffeeName" data-base-name="Еспресо">Глясе</h1>
+            <p class="price-info">Базова ціна: <span id="baseCoffeePrice">99</span> грн</p>
+            <p class="price-info">Загальна ціна: <span id="totalCoffeePrice">0</span> грн</p>
+
+            <div class="setting-group">
+                <h3>Оберіть розмір:</h3>
+                <div class="options-grid">
+                    <label class="option-label">
+                        <input type="radio" name="size" value="Маленький" data-price-mod="0" checked> Маленький (200 мл)
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="size" value="Середній" data-price-mod="10"> Середній (300 мл) (+10 грн)
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="size" value="Великий" data-price-mod="20"> Великий (400 мл) (+20 грн)
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <h3>Додайте цукор:</h3>
+                <div class="options-grid">
+                    <label class="option-label">
+                        <input type="radio" name="sugar" value="З цукром" checked> Так, з цукром
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="sugar" value="Без цукру"> Ні, без цукру
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <h3>Додатково:</h3>
+                <div class="options-grid">
+                    <label class="option-label">
+                        <input type="checkbox" name="extra" value="Кориця" data-price-mod="5"> Додати корицю (+5 грн)
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="extra" value="Маршмеллоу" data-price-mod="10"> Додати маршмеллоу (+10 грн)
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" class="add-to-cart-button" id="addToCartWithSettings">Додати до кошика</button>
+            <button type="button" class="back-to-menu-button" onclick="window.location.href='towar.html'">Повернутися до меню</button>
+        </div>
+    </div>
+
+    <script src="./JS/Dopseting.js"></script>
+</body>
+</html>

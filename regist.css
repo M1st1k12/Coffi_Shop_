@@ -1,0 +1,235 @@
+/* ... Ваш існуючий CSS ... */
+
+/* Стилі для повідомлень (успіх/помилка) */
+.registration-message {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Приклад стилів для повідомлень про помилки (якщо хочете окремий вигляд) */
+.registration-message[style*="color: red"] {
+    background-color: #ffe0e0;
+    border: 1px solid #ff9999;
+}
+
+/* Приклад стилів для повідомлень про успіх */
+.registration-message[style*="color: green"] {
+    background-color: #e0ffe0;
+    border: 1px solid #99ff99;
+}
+
+/* Загальні стилі та шрифти */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ece9e6, #ffffff); /* М'який градієнт фону */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Висота на весь екран */
+    color: #333;
+    overflow-x: hidden; /* Запобігаємо горизонтальному скролу */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5C4033; /* Темно-коричневий для заголовків */
+}
+
+a {
+    text-decoration: none;
+    color: #8B4513; /* Колір посилань - колір кави */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a0522d; /* Зміна кольору при наведенні */
+}
+
+/* Контейнер реєстрації */
+.registration-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 1s ease-out; /* Анімація появи */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.registration-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.registration-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Форма */
+.registration-form {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #8B4513; /* Колір кави при фокусі */
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2);
+    outline: none;
+}
+
+/* Чекбокс */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    min-width: 16px; /* Забезпечуємо мінімальний розмір для чекбокса */
+    min-height: 16px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-size: 0.9em;
+    color: #666;
+    display: flex; /* Для вирівнювання тексту з чекбоксом */
+    align-items: center;
+}
+
+/* Кнопка реєстрації */
+.register-button {
+    background-color: #8B4513; /* Колір кави */
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(139, 69, 19, 0.3);
+}
+
+.register-button:hover {
+    background-color: #a0522d;
+    transform: translateY(-2px);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+/* Вхід через соцмережі */
+.social-login {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.social-login p {
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Відстань між кнопками */
+}
+
+.social-button {
+    background-color: #f7f7f7;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #e0e0e0;
+    border-color: #c0c0c0;
+}
+
+.social-button img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Посилання для входу */
+.login-link {
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .registration-container {
+        padding: 25px;
+        border-radius: 0; /* На мобільних можна зробити без заокруглень, щоб зайняти всю ширину */
+        width: 100%;
+        box-shadow: none; /* Без тіні на мобільних */
+    }
+
+    .registration-title {
+        font-size: 2em;
+    }
+
+    .registration-subtitle {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .social-buttons {
+        flex-direction: column; /* Кнопки соцмереж у стовпчик на мобільних */
+        gap: 10px;
+    }
+}
